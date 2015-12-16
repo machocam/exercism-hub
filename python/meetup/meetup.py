@@ -3,11 +3,10 @@ from datetime import date
 
 def meetup_day (year, month, week_day, spec):
 	base_info = monthrange(year, month)
-	base_info[0]
 	day = 0 
 	
 	#Here I introduce two dictionaries that will translate the input date into structured data
-	weekday_num ={"Monday":0, "Tuesday":1, "Wednesday":2, "Thursday":3, "Friday":4, "Saturday":5, "Sunday":6}
+	weekday_num = {"Monday":0, "Tuesday":1, "Wednesday":2, "Thursday":3, "Friday":4, "Saturday":5, "Sunday":6}
 	specs_num = {"1st":1, "2nd":2, "3rd":3, "4th":4, "5th":5, "last": "last", "teenth":"teenth"}
 	
 	#introuction to the logic split in two cases.

@@ -1,14 +1,12 @@
 import string
 
 def is_pangram (my_string):
-    my_string = my_string.lower()
-    sum_values = 0
-    string_list = sorted(my_string)
-    alpha_dict = {char : 0 for char in string.ascii_lowercase}
-    for char in string_list:
-        if char in string.ascii_lowercase:
-            alpha_dict[char] = 1
+    count = 0
+    set_input = sorted(set(my_string.lower()))
+    for char in set_input:
+        if char in list(string.ascii_lowercase):
+            count += 1
+    return count == 26
+
+
     
-    for key in alpha_dict:
-        sum_values += alpha_dict[key]
-    return sum_values == 26
